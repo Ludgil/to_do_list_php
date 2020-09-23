@@ -7,11 +7,15 @@ include 'includes/header.php';
     <div class="row">
         <div class="col-8">
             <div class="row">
-                <div class="col-6">task</div>
-                <div class="col-3">start</div>
-                <div class="col-3">end</div>
+                <div class="col-6">Task</div>
+                <div class="col-2">Start</div>
+                <div class="col-2">End</div>
+                <div class="col-1">Done</div>
+                <div class="col-1">Delete</div>
             </div>
             <?php echo display_task() ?>
+            <hr>
+            <?php echo display_finished_task() ?>
         </div>
         <div class="col-4">
             <?php
