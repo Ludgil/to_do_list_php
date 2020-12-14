@@ -1,0 +1,47 @@
+body{
+    
+  background: #cfd9df; 
+  background: -webkit-linear-gradient(to right, #cfd9df, #e2ebf0); 
+  background: linear-gradient(to right, #cfd9df , #e2ebf0);
+
+
+}
+
+.to_do{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+    background: #ffffff; 
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.034),
+        0 3px 3px rgba(0, 0, 0, 0.048),
+        0 6px 6px rgba(0, 0, 0, 0.06);
+}
+
+.finished_task{
+
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+    background: #424242; 
+    background: -webkit-linear-gradient(to right, #424242, #252525); 
+    background: linear-gradient(to right,#424242 , #252525);
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.034),
+        0 3px 3px rgba(0, 0, 0, 0.048),
+        0 6px 6px rgba(0, 0, 0, 0.06);
+
+}
+
+.task_head{
+    margin-bottom: 10px;
+}
+
+.task_form{
+    margin-bottom: 50px;
+}
+

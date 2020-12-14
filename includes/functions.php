@@ -4,18 +4,18 @@ function display_task(){
     
     $get_task = $bdd->prepare("SELECT * FROM todo WHERE user_id = '1' AND end_task = '0' ");
     $get_task->execute();
-    $the_task = '<form method="post" action="task.php">';
+    $the_task = '<form method="post" action="task.php" id="task_form">';
     while($row = $get_task->fetch()){
         $task_id = $row['id'];
         $task = $row['task'];
         $start_date = $row['start_date'];
         $end_date = $row['end_date'];
-        $the_task .= '<div class="row">
-                        <div class="col-6">'.$task.'</div>
-                        <div class="col-2">'.$start_date.'</div>
-                        <div class="col-2">'.$end_date.'</div>
-                        <div class="col-1"><button type="submit" name="validate" value="'.$task_id.'">V</button></div>
-                        <div class="col-1"><button type="submit" name="delete" value="'.$task_id.'">X</button></div>
+        $the_task .= '<div class="row to_do">
+                        <div class="col-6" id="the_task">'.$task.'</div>
+                        <div class="col-2" id="the_start">'.$start_date.'</div>
+                        <div class="col-2" id="the_end">'.$end_date.'</div>
+                        <div class="col-1"><button type="submit" class="btn btn-primary btnValidate" id="for_val" name="validate" value="'.$task_id.'">V</button></div>
+                        <div class="col-1"><button type="submit" class="btn btn-danger btnDelete" id="for_del" name="delete" value="'.$task_id.'">X</button></div>
                       </div>';         
     }
     $the_task .= '</form>';
@@ -33,10 +33,12 @@ function display_finished_task(){
         $task = $row['task'];
         $start_date = $row['start_date'];
         $end_date = $row['end_date'];
-        $the_task .= '<div class="row">
-                        <div class="col-6">'.$task.'</div>
-                        <div class="col-2">'.$start_date.'</div>
-                        <div class="col-2">'.$end_date.'</div>
+        $the_task .= '<div class="row finished_task">
+                        <div class="col-6" id="the_finished_task">'.$task.'</div>
+                        <div class="col-2" id="the_finished_start">'.$start_date.'</div>
+                        <div class="col-2" id="the_finished_end">'.$end_date.'</div>
+                        <div class="col-1"></div>
+                        <div class="col-1"><button type="submit" class="btn btn-danger btnDelete" form="task_form" name="delete" value="'.$task_id.'">X</button></div>
                       </div>';         
     }
     $the_task .= '</form>';
